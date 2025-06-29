@@ -68,6 +68,14 @@ app.use(express.static(path.join(__dirname, "/public")));
 app.get("/", (req, res) => {
     res.render("index.ejs");
 });
+app.get("/signup", (req, res) => {
+    res.render("users/signup.ejs")
+});
+
+
+app.get("/login", (req, res) => {
+    res.render("users/login.ejs")
+});
 
 app.listen(3000, () => {
     console.log("Server is listening to port 3000");
